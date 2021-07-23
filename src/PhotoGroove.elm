@@ -5,15 +5,15 @@ import Html.Attributes exposing (..)
 
 
 urlPrefix =
-    "http://elm-in-action.com"
+    "http://elm-in-action.com/"
 
 
 view model =
     div [ class "content" ]
-        [ h1 [] [ text "Photo Groove beans" ]
+        [ h1 [] [ text "Photo Groove" ]
         , div [ id "thumbnails" ]
             (List.map
-                (\photo -> viewThumbnail model.selectedUrl photo)
+                (viewThumbnail model.selectedUrl)
                 model.photos
             )
         , img

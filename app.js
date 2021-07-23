@@ -4503,7 +4503,7 @@ var $elm$html$Html$Attributes$src = function (url) {
 };
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$PhotoGroove$urlPrefix = 'http://elm-in-action.com';
+var $author$project$PhotoGroove$urlPrefix = 'http://elm-in-action.com/';
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -4561,7 +4561,7 @@ var $author$project$PhotoGroove$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Photo Groove beans')
+						$elm$html$Html$text('Photo Groove')
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -4571,9 +4571,7 @@ var $author$project$PhotoGroove$view = function (model) {
 					]),
 				A2(
 					$elm$core$List$map,
-					function (photo) {
-						return A2($author$project$PhotoGroove$viewThumbnail, model.selectedUrl, photo);
-					},
+					$author$project$PhotoGroove$viewThumbnail(model.selectedUrl),
 					model.photos)),
 				A2(
 				$elm$html$Html$img,
